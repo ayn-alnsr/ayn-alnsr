@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* خلفية سيبرانية */
+/* خلفية */
 .bg-overlay {
   position: fixed;
   inset: 0;
@@ -29,25 +29,26 @@ body {
   z-index: -1;
 }
 
-/* الهيرو */
+/* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 120px 20px;
+  padding: 90px 20px 60px;
 }
 
 .hero h1 {
-  font-size: 56px;
+  font-size: 52px;
   letter-spacing: 2px;
 }
 
 .tagline {
-  margin: 20px 0 40px;
+  margin: 18px 0 32px;
   color: #9ca3af;
+  font-size: 18px;
 }
 
 /* خط متوهج */
 .glow-line {
-  width: 220px;
+  width: 200px;
   height: 3px;
   margin: 15px auto;
   background: #22d3ee;
@@ -55,14 +56,20 @@ body {
   border-radius: 5px;
 }
 
-/* أزرار */
+/* الأزرار */
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .btn {
-  padding: 14px 38px;
+  padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  margin: 5px;
-  display: inline-block;
+  font-size: 16px;
 }
 
 .primary {
@@ -75,50 +82,99 @@ body {
   color: #22d3ee;
 }
 
-/* الخدمات */
+/* ===== SERVICES ===== */
 .services {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 80px 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .card {
-  width: 290px;
   background: rgba(15,23,42,0.95);
-  padding: 32px;
+  padding: 28px;
   border-radius: 18px;
-  transition: 0.4s ease;
+  text-align: center;
   box-shadow: 0 0 25px #22d3ee55;
+  transition: 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-15px) scale(1.04);
+  transform: translateY(-10px);
   box-shadow: 0 0 40px #22d3ee;
 }
 
-/* تواصل */
+/* ===== CONTACT ===== */
 .contact {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 .phone {
-  margin-top: 15px;
-  font-size: 24px;
+  margin-top: 12px;
+  font-size: 22px;
   color: #22d3ee;
   font-weight: bold;
 }
 
-/* الفوتر */
+/* ===== FOOTER ===== */
 .footer-brand {
   text-align: center;
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
 .footer-brand h3 {
   margin: 15px 0;
   color: #e5e7eb;
-  letter-spacing: 1px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 70px 15px 40px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .tagline {
+    font-size: 15px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    padding: 40px 15px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  .phone {
+    font-size: 18px;
+  }
 }
